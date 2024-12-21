@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://Natasha:natashagyanli3@cluster0.ebrfj.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
