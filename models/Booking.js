@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
-  name: { 
+  name: {
     type: String, 
     required: true 
   },
@@ -23,9 +23,8 @@ const bookingSchema = new mongoose.Schema({
   },
   message: { 
     type: String, 
-    required: false // Message is optional
+    required: false
   }
 });
 
-// Export the model
 module.exports = mongoose.model('Booking', bookingSchema);
