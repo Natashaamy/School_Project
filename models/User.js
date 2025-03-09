@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
         enum: ["admin", "user"],
         default: "user",
     },
-});
+}); 
 
 // Hash password before saving
 UserSchema.pre("save", async function (next) {

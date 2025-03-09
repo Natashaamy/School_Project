@@ -3,14 +3,12 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 
-// Generate JWT Token
 const generateToken = (user) => {
-    return jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
+    return jwt.sign({ id: user._id, role: user.role }, 'nwgfucweiiwye87rwyw8rc2b438rynciuger87237tyr879cy2384r7t234782ybrci762grybc2ir723478', {
         expiresIn: "7d",
     });
 };
 
-// Register a new user
 exports.register = async (req, res) => {
     try {
         const { fullName, email, password, role } = req.body;
@@ -28,7 +26,6 @@ exports.register = async (req, res) => {
     }
 };
 
-// Login user
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;

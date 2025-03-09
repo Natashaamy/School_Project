@@ -7,7 +7,7 @@ const protect = (req, res, next) => {
     if (!token) return res.status(401).json({ message: "Unauthorized" });
 
     try {
-        const decoded = jwt.verify(token.replace("Bearer ", ""), process.env.JWT_SECRET);
+        const decoded = jwt.verify(token.replace("Bearer ", ""), 'nwgfucweiiwye87rwyw8rc2b438rynciuger87237tyr879cy2384r7t234782ybrci762grybc2ir723478');
         req.user = decoded;
         next();
     } catch (error) {
